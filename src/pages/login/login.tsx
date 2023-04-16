@@ -1,4 +1,4 @@
-const SignIn = (): JSX.Element => (
+const Login = (): JSX.Element => (
   <>
     <meta charSet="UTF-8" />
     <title>WTW</title>
@@ -82,4 +82,4 @@ const SignIn = (): JSX.Element => (
 
 );
 
-export { SignIn };
+export default Login;

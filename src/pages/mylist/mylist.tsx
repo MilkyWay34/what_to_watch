@@ -1,4 +1,4 @@
-const Mylist = (): JSX.Element => (
+const MyList = (): JSX.Element => (
   <>
     <meta charSet="UTF-8" />
     <title>WTW</title>
@@ -152,4 +152,4 @@ const Mylist = (): JSX.Element => (
 
 );
 
-export {Mylist};
+export default MyList;

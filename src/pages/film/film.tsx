@@ -181,4 +181,4 @@ const Film = (): JSX.Element => (
 
 );
 
-export {Film}
+export default Film;

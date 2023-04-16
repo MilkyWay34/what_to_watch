@@ -160,4 +160,4 @@ const Main = ({ filmsCount = 0, genre, title, releaseDate = new Date()}: MainPro
   </>
 );
 
-export { Main };
+export default Main;

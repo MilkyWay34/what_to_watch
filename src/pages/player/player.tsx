@@ -68,4 +68,4 @@ const Player = (): JSX.Element => (
   </>
 );
 
-export {Player}
+export default Player;

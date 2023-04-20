@@ -1,13 +1,13 @@
-import {Card} from '../../components/card/card';
+import {Film} from '../../types/film';
+import React from 'react';
+import CardList from '../../components/card-list/card-list';
+
 
 type MainProps = {
-  filmsCount: number;
-  title: string;
-  genre: string;
-  releaseDate: Date;
+  films: Film[];
 }
 
-const Main = ({ filmsCount = 0, genre, title, releaseDate = new Date()}: MainProps): JSX.Element => (
+const Main = ({films}: MainProps): JSX.Element => (
   <>
     <meta charSet="UTF-8" />
     <title>WTW</title>
@@ -79,10 +79,10 @@ const Main = ({ filmsCount = 0, genre, title, releaseDate = new Date()}: MainPro
             <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width={218} height={327} />
           </div>
           <div className="film-card__desc">
-            <h2 className="film-card__title">{title}</h2>
+            <h2 className="film-card__title">{films[0].title}</h2>
             <p className="film-card__meta">
-              <span className="film-card__genre">{genre}</span>
-              <span className="film-card__year">{releaseDate.toLocaleDateString()}</span>
+              <span className="film-card__genre">{films[0].genre}</span>
+              <span className="film-card__year">{films[0].released}</span>
             </p>
             <div className="film-card__buttons">
               <button className="btn btn--play film-card__button" type="button">
@@ -138,7 +138,7 @@ const Main = ({ filmsCount = 0, genre, title, releaseDate = new Date()}: MainPro
           </li>
         </ul>
         <div className="catalog__films-list">
-          {Array.from({ length:filmsCount }, () => <Card />)}
+          <CardList films={films} />
         </div>
         <div className="catalog__more">
           <button className="catalog__button" type="button">Show more</button>
